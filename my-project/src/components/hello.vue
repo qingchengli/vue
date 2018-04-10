@@ -12,6 +12,12 @@
     <!--按钮改变颜色-->
     <p :class="{color:toggle>0.5}">你好</p>
     <button v-on:click="changeColor()">改变颜色 </button>
+    <p>
+      <input type="text" v-model="message" />
+      <input type="text" v-model="message2" />
+    </p>
+    <button v-on:click="sum()">注册</button>
+    <p>{{count}}</p>
   </div>
 </template>
 
@@ -29,6 +35,9 @@ export default {
       toggle : Math.random(),
       // 颜色
       color : 'red',
+      message : 123,
+      message2 : 123,
+      count : 5,
       myUrl :'http://www.baidu.com',
       banner : [
         {url : pic},
@@ -48,6 +57,10 @@ export default {
 
     changeColor(){
       this.toggle = Math.random();
+    },
+
+    sum(){
+      this.count=parseInt(this.message)+parseInt(this.message2);
     }
   }
 }
