@@ -23,6 +23,7 @@
 
 <script>
 import pic from './../../static/1.jpg'
+
 export default {
   name : 'hello',
   data () {
