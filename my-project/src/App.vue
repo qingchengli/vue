@@ -17,7 +17,7 @@ export default {
   name: 'App',
   
   components:{
-    year
+    year,
   },
 
   data : function (){

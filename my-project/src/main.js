@@ -24,7 +24,6 @@ Vue.directive('focus',{
 
 new Vue({
   el: '#app',
-  router,
   components: { App },
   template: '<App/>'
 })

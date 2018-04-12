@@ -1,19 +1,28 @@
 <template>
     <div class="year" >
-        <p >{{age}}</p>
-        <button v-on:click="add">增加</button>
-        <!--测试watch-->
-        <input type="text" v-model="msg">
+        <ul>
+            <li v-for="temp in list">
+                <p>{{dayin()}}</p>
+                <p>{{dayinto}}</p>
+            </li>
+        </ul>
+        <hello></hello>
     </div>
 </template>
 <script>
+    import hello from './hello'
+
     export default {
         name : 'year',
 
+        components : {
+            hello
+        },
         data : function (){
             return {
                 age : 2,
                 msg : undefined,
+                list : [1,2,3,4,5]
             }
         },
 
@@ -26,6 +35,22 @@
         methods : {
             add : function (){
                 this.age += 1;
+            },
+
+            dayin : function (){
+                console.log('in meth');
+               return this.age;
+            }
+        },
+
+        //定时器,挂载后每秒list多一个元素
+        mounted : function (){
+        },
+
+        computed : {
+            dayinto : function (){
+                console.log('in com');
+                return this.age;
             }
         },
 
@@ -39,10 +64,6 @@
 
         beforeMount : function (){
             console.log("准备挂载");
-        },
-
-        mounted : function (){
-            console.log('挂载完毕');
         },
 
         // beforeUpdate : function (){

@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import pic from './../../static/1.jpg'
+import pic from './../../../static/1.jpg'
 
 export default {
   name : 'hello',
