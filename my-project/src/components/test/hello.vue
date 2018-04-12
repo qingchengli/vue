@@ -26,6 +26,7 @@ import pic from './../../../static/1.jpg'
 
 export default {
   name : 'hello',
+  
   data () {
     return {
       msg : '欢迎来到vue的世界',

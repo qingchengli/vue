@@ -4,20 +4,15 @@
    <!--<router-view/>-->
    <!--<hello></hello>-->
    <!--<page></page>-->
-   <year v-if="age<6"></year>
-   <p>{{age}}</p>
-   <button v-on:click="add">删除组建</button>
   </div>
 </template>
 
 <script>
-import year from './components/test/year'
 
 export default {
   name: 'App',
   
   components:{
-    year,
   },
 
   data : function (){
