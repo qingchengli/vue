@@ -20,7 +20,7 @@
                 this.$emit('myown',this.msg)
             },
 
-            onSon2 :function () {
+            onSon2 : function () {
                 this.$emit('yourown','hi');
             }
         }

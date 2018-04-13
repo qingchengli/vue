@@ -4,15 +4,17 @@
    <!--<router-view/>-->
    <!--<hello></hello>-->
    <!--<page></page>-->
+   <comment></comment>
   </div>
 </template>
 
 <script>
-
+import comment from './components/comment/comment'
 export default {
   name: 'App',
   
   components:{
+    comment,
   },
 
   data : function (){
