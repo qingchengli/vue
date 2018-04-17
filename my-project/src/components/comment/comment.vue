@@ -7,10 +7,10 @@
         <ul>
             <li v-for="(temp,index) in list" v-if="index<7">{{temp}}</li>
         </ul>
-        <transition name="fade" mode="out-in">
+        <transition 
+        >
              <!--<div :is="who">1111</div>-->
-             <p v-if="showIt" key='1'>123</p>
-             <p v-else>555</p>
+             <p v-show="showIt" key='1'>123</p>
         </transition>
         
         <button @click="tabit">切换</button>
@@ -40,6 +40,7 @@
         },
 
         methods : {
+            
             send : function () {
                 if (this.msg != null) {
                     this.list.push(this.msg);
@@ -47,11 +48,14 @@
                     this.msg = null;
                 }
             },
+
             tabit : function () {
                 // this.who == 'cSon' ? this.who = 'cSon2' : this.who = 'cSon'; 
                 this.showIt == true ? this.showIt = false : this.showIt = true; 
+                $('button').css({'color':'red'})
 
-            }
+            },
+
         },
 
         filters : {

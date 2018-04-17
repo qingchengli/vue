@@ -7,23 +7,9 @@ import router from './router'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
-Vue.directive('focus',{
-  bind : function (el,msg) {
-    alert ("添加成功");
-  },
-
-  update : function (el,binding) {
-    el.style.color = binding.value.color;
-    el.style.fontSize = bingding.value.fontSize;
-  },
-
-  unbind : function (el,binding) {
-    alert ("移除成功")
-  }
-})
 
 new Vue({
   el: '#app',
-  components: { App },
+  components: { App, router },
   template: '<App/>'
 })

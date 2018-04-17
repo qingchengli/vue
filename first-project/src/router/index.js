@@ -1,25 +1,25 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import kiss from '@/components/kissWorld'
+import VueRouter from 'vue-router'
+import indexPage from './../pages/indexPage'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
+export default new VueRouter({
   routes: [
     {
       path: '/',
-      redirect: '/hello'
+      component : indexPage
     },
-    {
-      path: '/hello',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
-    {
-      path: '/kiss/:color/:width',
-      name: 'kissWorld',
-      component: kiss
-    }
-  ]
-})
+  //   {
+  //     path: '/hello',
+  //     name: 'HelloWorld',
+  //     component: HelloWorld
+  //   },
+  //   {
+  //     path: '/kiss/:color/detail/:width',
+  //     name: 'kissWorld',
+  //     component: kiss
+  //   }
+  // 
+]}
+)
