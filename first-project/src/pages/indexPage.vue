@@ -1,6 +1,6 @@
 <template>
     <div class="indexPage">
-        <p>123</p>
+        <p></p>
     </div>
 </template>
 <script>
